@@ -564,7 +564,7 @@
             <resolution>0.05</resolution>
           </range>
         </ray>
-        <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+        <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_range">
           <topicName>proximity/front</topicName>
           <frameName>range_sensor_front</frameName>
           <gaussianNoise>0.000</gaussianNoise>
