@@ -16,11 +16,12 @@ sensor_curve = [[0, 0], [10, 2.6],
 
 
 def simulate_sensor(reading):
+    reading_cm = reading * 100
     for pt1, pt2 in zip(sensor_curve, sensor_curve[1:]):
-        if pt1[0] <= reading < pt2[0]:
+        if pt1[0] <= reading_cm < pt2[0]:
             dx = pt2[0] - pt1[0]
             dy = pt2[1] - pt1[1]
-            return (reading - pt1[0]) * dy / dx + pt1[1]
+            return (reading_cm - pt1[0]) * dy / dx + pt1[1]
     return math.inf
 
 
