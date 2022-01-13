@@ -12,10 +12,8 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+  
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_glo4001.launch" />
 
-  <param name="robot_description" command="$(find turtlebot3_gazebo)/models/turtlebot3_burger_kinect/model.sdf" />
-
-  <!-- rosrun gazebo_ros spawn_model -sdf -file src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_burger_kinect/model.sdf -model turtle -x -2 -y -0.5 -z 0-->
-
-  <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-sdf -model turtlebot3_$(arg model)_kinect -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_sdf"  args="-sdf -file $(find turtlebot3_gazebo)/models/turtlebot3_burger_kinect/model.sdf -model turtlebot -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)" />
 </launch>
