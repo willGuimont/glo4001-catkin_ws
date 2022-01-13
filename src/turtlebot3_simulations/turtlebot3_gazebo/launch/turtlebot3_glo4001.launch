@@ -2,4 +2,5 @@
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
   <node name="compressDepth" pkg="image_transport" type="republish" args="raw in:=/camera/depth/image_raw compressedDepth out:=/camera/depth/image_raw/" />
   <node name="setStepSize" pkg="turtlebot3_gazebo" type="set_time_step.sh"/>
+  <node name="rangeSensor" pkg="turtlebot3_gazebo" type="range_sensor.py"/>
 </launch>
