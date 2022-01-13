@@ -520,6 +520,13 @@
     <model name='range'>
       <pose>0.05 0 0 0 0 0</pose>
       <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <box>0.05 0.05 0.05</box>
+            </mesh>
+          </geometry>
+        </visual>
         <inertial>
           <pose>0.0 0.0 0.25 0 -0 0</pose>
           <mass>0.00001</mass>
@@ -559,7 +566,7 @@
           <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_range">
             <topicName>/proximity/front</topicName>
             <frameName>range_sensor_front</frameName>
-            <gaussianNoise>0.1</gaussianNoise>
+            <gaussianNoise>0.000</gaussianNoise>
             <alwaysOn>true</alwaysOn>
             <updateRate>10</updateRate>
             <radiation>infrared</radiation>
