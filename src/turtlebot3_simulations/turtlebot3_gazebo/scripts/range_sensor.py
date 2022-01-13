@@ -5,7 +5,7 @@ from sensor_msgs.msg import LaserScan
 
 def make_callback(pub):
     def on_message(data):
-        rospy.loginfo(f'{rospy.get_caller_id()} Received {data}')
+        rospy.loginfo(f'{rospy.get_caller_id()} Received {data.ranges[0]}')
         pub.publish(f'Hello {data}')
 
     return on_message
