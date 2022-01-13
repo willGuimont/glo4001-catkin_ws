@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import math
+import numpy as np
 import rospy
 from std_msgs.msg import String
 from sensor_msgs.msg import LaserScan
@@ -21,7 +22,7 @@ def simulate_sensor(reading):
         if pt1[0] <= reading_cm < pt2[0]:
             dx = pt2[0] - pt1[0]
             dy = pt2[1] - pt1[1]
-            return (reading_cm - pt1[0]) * dy / dx + pt1[1]
+            return (reading_cm - pt1[0]) * dy / dx + pt1[1] + np.random.randn() * 0.1
     return math.inf
 
 

@@ -520,13 +520,6 @@
     <model name='range'>
       <pose>0.05 0 0 0 0 0</pose>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <box>0.05 0.05 0.05</box>
-            </mesh>
-          </geometry>
-        </visual>
         <inertial>
           <pose>0.0 0.0 0.25 0 -0 0</pose>
           <mass>0.00001</mass>
