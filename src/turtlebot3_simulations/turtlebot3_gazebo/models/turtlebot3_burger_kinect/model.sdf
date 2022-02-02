@@ -518,10 +518,10 @@
       </link>
     </model>
     <model name='range'>
-      <pose>0.05 0 0 0 0 0</pose>
+      <pose>0.05 0 0.15 0 0 0</pose>
       <link name='link'>
         <inertial>
-          <pose>0.0 0.0 0.25 0 -0 0</pose>
+          <pose>0.0 0.0 0.0 0 -0 0</pose>
           <mass>0.00001</mass>
           <inertia>
             <ixx>2.21000000e-11</ixx>
@@ -540,14 +540,14 @@
               <horizontal>
                 <samples>1</samples>
                 <resolution>1</resolution>
-                <min_angle>-0.174533</min_angle>
-                <max_angle>0.174533</max_angle>
+                <min_angle>0.0</min_angle>
+                <max_angle>0.0</max_angle>
               </horizontal>
               <vertical>
                 <samples>1</samples>
                 <resolution>1</resolution>
-                <min_angle>-0.174533</min_angle>
-                <max_angle>0.174533</max_angle>
+                <min_angle>0.0</min_angle>
+                <max_angle>0.0</max_angle>
               </vertical>
             </scan>
             <range>
