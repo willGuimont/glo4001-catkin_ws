@@ -22,8 +22,8 @@ def simulate_sensor(reading):
         if pt1[0] <= reading_cm < pt2[0]:
             dx = pt2[0] - pt1[0]
             dy = pt2[1] - pt1[1]
-            return (reading_cm - pt1[0]) * dy / dx + pt1[1] + np.random.randn() * 0.1
-    return math.inf
+            return (reading_cm - pt1[0]) * dy / dx + pt1[1] + np.random.randn() * 0.01
+    return 0
 
 
 def make_callback(pub):
@@ -39,3 +39,4 @@ if __name__ == '__main__':
     rospy.init_node('range_sensor', anonymous=True)
     rospy.Subscriber('/proximity/front', LaserScan, make_callback(pub))
     rospy.spin()
+
